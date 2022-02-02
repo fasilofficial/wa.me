@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wa.me | Fasil</title>
+    <style>
+        body {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .container {
+            width: 90%;
+            max-width: 300px;
+            margin: 0 auto;
+            display: grid;
+            place-items: center;
+            gap: 10px;
+            padding: 30px;
+            padding-bottom: 60px;
+            background-color: rgb(18, 140, 126);
+            color: #fff;
+            border-radius: 8px;
+        }
+        button#button {
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        button#button:hover {
+            transform: scale(1.03);
+            background-color: #fff;
+        }
+
+        input {
+            border: none;
+            border-radius: 4px;
+            width: 200px;
+            padding-left: 5px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="number">Chat on Whatspp:</label>
+        <input type="text" placeholder="Enter the number" name="number" id="number">
+        <button id="button">Chat now</button>
+    </div>
+
+
+    <script>
+        let button = document.getElementById("button");
+        button.addEventListener("click", () => {
+            let value = document.getElementById("number").value;
+            let url = "http://wa.me/91" + value;
+            window.location = url;
+        })
+    </script>
+</body>
+</html>
